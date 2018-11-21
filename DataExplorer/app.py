@@ -1,4 +1,4 @@
-# pyinstaller --onefile --distpath  app_json.py
+# pyinstaller --onefile --distpath <dir> app_json.py
 import json
 import time
 import os

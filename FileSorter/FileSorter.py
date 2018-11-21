@@ -1,5 +1,6 @@
 import os.path
-dir = input()
+
+dir = str(os.path.dirname(os.path.realpath(__file__)))+"/"
 
 # Goes through each file in directory
 for file in os.listdir(dir):
