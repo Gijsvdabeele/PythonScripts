@@ -12,7 +12,7 @@ def move_file():
 for file in os.listdir(DIR):
     # Skips self and folders
     if str(file) != os.path.basename(__file__) and os.path.isdir(str(file)) is False:
-        # Check file type
+        # Gets file type
         ext = os.path.splitext(str(file))[1][1:]
         # Checks if folder already exist if not makes it
         if os.path.isdir(DIR+ext):
