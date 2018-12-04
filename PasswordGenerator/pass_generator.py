@@ -7,8 +7,7 @@ specials = list(string.punctuation)
 chars = list(string.ascii_lowercase)
 
 # Gets password length from user
-print("Please enter password length")
-length = int(input())
+length = int(input("Please enter password length:\n"))
 
 # Add all the character sets together and build password by choosing random options
 characters = string.ascii_letters + string.digits + string.punctuation

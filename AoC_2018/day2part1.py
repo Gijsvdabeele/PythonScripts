@@ -1,3 +1,5 @@
+import string
+
 data = """kqzxdenujwcsthbzgvyioflcsp
 vqwxdenujwcsthbmggyioflarp
 kqzxienujwcsthbmglyioclarp
@@ -248,18 +250,27 @@ xczxdenujwcsthbmgvyooflarp
 kuzxdenujucsthbmgvykoflarp
 kqzxtenujwcwthbmgvyioplarp
 kqzxdencllcsthbmgvyioflarp"""
-data_list = data.split("\n")
+
+split_data = data.split('\n')
+chars = string.ascii_lowercase
+count2 = 0
+count3 = 0
+success = False
+
+for item in split_data:
+    success = False
+    for c in chars:
+        if item.count(c) == 2 and not success:
+            count2 += 1
+            success = True
 
 
-def difference(seq1, seq2):
-    count = 0
-    for i in range(len(seq1)):
-        if seq1[i] != seq2[i]:
-            count += 1
-    if count == 1:
-        print(seq1+"\n"+seq2)
+for item in split_data:
+    success = False
+    for c in chars:
+        if item.count(c) == 3 and not success:
+            count3 += 1
+            success = True
 
+print(count2*count3)
 
-for item1 in data_list:
-    for item2 in data_list:
-        difference(item1, item2)

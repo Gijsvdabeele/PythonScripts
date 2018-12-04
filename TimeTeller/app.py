@@ -2,6 +2,7 @@ import keyboard
 import time
 import datetime
 import pyttsx3
+
 tts = pyttsx3.init()
 on = True
 rate = tts.getProperty('rate')
