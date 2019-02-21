@@ -1,5 +1,5 @@
 # http://www.donttap.com/
-
+# Only works on 1920x1080 screens
 from PIL import ImageGrab
 from pyautogui import click
 import keyboard
